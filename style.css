@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6; /* Added for better readability */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center; /* Centered header content */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center; /* Centered navigation items */
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Removed margin from the last item */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center; /* Centered main content */
+}
+
+section {
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+    width: 100%; /* Ensured sections take full width */
+    max-width: 1200px; /* Limited max width for better readability */
+}
+
+section:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; /* Centered main content in larger screens */
+    }
+
+    section {
+        flex: 1 1 calc(50% - 2rem);
+        margin: 1rem;
+    }
+
+    section#contact {
+        flex: 1 1 100%;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
